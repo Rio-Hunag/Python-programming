@@ -1,22 +1,6 @@
-
-def find_second_highest(scores):
-    unique_scores = sorted(set(scores), reverse=True)
-
-    if len(unique_scores) < 2:
-        raise ValueError("At least two distinct scores are required.")
-
-    return unique_scores[1]
-
-
-def main():
+if __name__ == '__main__':
     n = int(input())
-    scores = list(map(int, input().split()))
-
-    if n != len(scores):
-        raise ValueError("The number of scores does not match the input.")
-
-    print(find_second_highest(scores))
-
-
-if __name__ == "__main__":
-    main()
+    arr = map(int, input().split())
+    unique_score=set(arr)
+    sorted_score=sorted(unique_score)
+    print(sorted_score[-2])
